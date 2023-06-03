@@ -1,0 +1,33 @@
+<app-form-estudante
+[estudante]="estudantes"
+(saveEvent)="onSaveEvent($event)"
+(cleanEvent)=" onCleanEvent()"
+></app-form-estudante>
+
+<table class="table table-light table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Curso</th>
+        <th scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudante of estudante">
+        <th scope="row">{{estudante.id}}</th>
+        <td>{{estudante.name}}</td>
+        <td>{{estudante.email}}</td>
+        <td>{{estudante.phoneNumber}}</td>
+        <td>{{estudante.address}}</td>
+        <td>{{estudante.course}}</td>
+        <td>
+          <button class="btn btn-primary me-1" (click)="edit(estudante)">Editar</button>
+          <button class="btn btn-danger" (click)="remove(estudante)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
