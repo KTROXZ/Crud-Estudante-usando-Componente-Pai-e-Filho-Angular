@@ -27,8 +27,8 @@ export class FormEstudanteComponent implements OnChanges{
       id: [''],
       name: [''],
       email: [''],
-      phoneNumber: [''],
-      address: [''],
+      phone: [''],
+      addres: [''],
       course: [''],
     })
   }
